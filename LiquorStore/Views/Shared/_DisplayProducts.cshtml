@@ -1,0 +1,14 @@
+﻿@model IEnumerable<LiquorStore.Models.Product>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+    @foreach (var item in Model)
+    {
+        <div style="font-size: 20px; border: 1px solid #ccc; padding: 10px; border-radius: 25px;">
+            <img style="width: 100%" src="~/Images/251876.jpg.thumb.319.319.png" /> <br /><br />
+            @Html.ActionLink(item.Name, "Details", new { id = item.Id }) <br />
+            @Html.DisplayFor(modelItem => item.Brand)<br />
+            @Html.DisplayFor(modelItem => item.Category)<br />
+            @Html.DisplayFor(modelItem => item.Price) <br />
+        </div>
+    }
+</div>

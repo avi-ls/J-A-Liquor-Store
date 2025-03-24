@@ -1,0 +1,55 @@
+﻿@model LiquorStore.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>REGISTER</h1>
+
+<h4>User</h4>
+<hr />
+
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.FirstName)
+                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @style = "color: red" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.LastName)
+                @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @style = "color: red" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Email)
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @style = "color: red" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.PhoneNumber)
+                @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @style = "color: red" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </td>
+        </tr>
+    
+    </table>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

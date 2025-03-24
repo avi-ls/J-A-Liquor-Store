@@ -1,0 +1,35 @@
+@model LiquorStore.Models.Product
+
+@{
+      ViewBag.Title = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+<table class="table">
+    <tr>
+        <th>Name:</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Category:</th>
+        <td>@Model.Category</td>
+    </tr>
+    <tr>
+        <th>Brand:</th>
+        <td>@Model.Brand</td>
+    </tr>
+    <tr>
+        <th>Price:</th>
+        <td>@Model.Price</td>
+    </tr>
+    <tr>
+        <th>StockQuantity:</th>
+        <td>@Model.StockQuantity</td>
+    </tr>
+    <tr>
+        <th>Size:</th>
+        <td>@Model.Size</td>
+    </tr>
+</table>
+@Html.ActionLink("Back", "Index")

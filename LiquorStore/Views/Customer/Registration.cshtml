@@ -1,0 +1,39 @@
+@model LiquorStore.Models.Customer
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+
+<h1>Register</h1>
+@using (Html.BeginForm())
+{
+    <form asp-controller="Customer" asp-action="Registration" method="post">
+            <tr>
+                <th>
+                    @Html.LabelFor(model => model.FirstName)
+                    @Html.TextBoxFor(model => model.FirstName)
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @style = "color: red" })<br>
+                </th>
+                <th>
+                    @Html.LabelFor(model => model.LastName)
+                    @Html.TextBoxFor(model => model.LastName)
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @style = "color: red" })<br>
+                </th>
+                <th>
+                    @Html.LabelFor(model => model.Email)
+                    @Html.TextBoxFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @style = "color: red" })<br>
+                </th>
+                <th>
+                    @Html.LabelFor(model => model.PhoneNumber)
+                    @Html.TextBoxFor(model => model.PhoneNumber)
+                    @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @style = "color: red" })<br>
+                </th>
+
+                <th>
+                    <button type="submit">Register</button>
+                </th>
+            </tr>
+    </form>
+}

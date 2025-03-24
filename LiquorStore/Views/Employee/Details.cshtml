@@ -1,0 +1,35 @@
+@model LiquorStore.Models.Employee
+
+@{
+      ViewBag.Title = "Employee Details";
+}
+
+<h2>Employee Details</h2>
+
+<table class="table">
+    <tr>
+        <th>First Name:</th>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <th>Last Name:</th>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <th>Phone Number:</th>
+        <td>@Model.PhoneNumber</td>
+    </tr>
+    <tr>
+        <th>Email:</th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <th>Position:</th>
+        <td>@Model.Position</td>
+    </tr>
+    <tr>
+        <th>Salary:</th>
+        <td>$@Model.Salary</td>
+    </tr>
+</table>
+@Html.ActionLink("Back", "Index")

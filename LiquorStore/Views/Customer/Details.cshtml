@@ -1,0 +1,55 @@
+@model LiquorStore.Models.Customer
+
+
+@{
+      ViewBag.Title = "Customer Details";
+}
+
+<h2>Customer Details</h2>
+
+<table class="table">
+    <tr>
+        <th>First Name:</th>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <th>Last Name:</th>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <th>Phone Number:</th>
+        <td>@Model.PhoneNumber</td>
+    </tr>
+    <tr>
+        <th>Email:</th>
+        <td>@Model.Email</td>
+    </tr>
+
+</table>
+<h3>Orders</h3>
+
+@if (Model.Orders.Any())
+{
+    <table class="table">
+        <tr>
+            <th>Order Date</th>
+            <th>Total Amount</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var order in Model.Orders)
+        {
+            <tr>
+                <td>@order.OrderDate.ToString("yyyy-MM-dd")</td>
+                <td>$@order.TotalAmount</td>
+                <td>
+                    @Html.ActionLink("View Order", "Details", "Order", new { id = order.Id }, null)
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>This customer has no orders.</p>
+}
+@Html.ActionLink("Back", "Index")
