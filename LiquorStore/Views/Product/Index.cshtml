@@ -6,40 +6,95 @@
 
 <h2>Product List</h2>
 
-@Html.Partial("_DisplayProducts", Model);
+<div style="position: relative;">
+    <input type="text" id="searchBox" placeholder="Search for products..." class="form-control" autocomplete="off">
+    <ul id="suggestions" class="list-group"></ul>
+</div>
 
-@* <p> *@
-@*     @Html.ActionLink("Create New", "Create") *@
-@* </p> *@
+<div id="searchResults">
+    @Html.Partial("_DisplayProducts", Model)
+</div>
+ 
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-@* <table class="table"> *@
-   
-@*         <tr> *@
-@*             <th>@Html.DisplayNameFor(model => model.Name)</th> *@
-@*             <th>@Html.DisplayNameFor(model => model.Category)</th> *@
-@*             <th>@Html.DisplayNameFor(model => model.Brand)</th> *@
-@*             <th>@Html.DisplayNameFor(model => model.Price)</th> *@
-@*             <th>@Html.DisplayNameFor(model => model.StockQuantity)</th> *@
-@*             <th>@Html.DisplayNameFor(model => model.Size)</th> *@
-            
-@*         </tr> *@
-  
-    
-@*         @foreach (var item in Model) *@
-@*         { *@
-@*             <tr> *@
-@*                 <td>@Html.DisplayFor(modelItem => item.Name)</td> *@
-@*                 <td>@Html.DisplayFor(modelItem => item.Category)</td> *@
-@*                 <td>@Html.DisplayFor(modelItem => item.Brand)</td> *@
-@*                 <td>$@Html.DisplayFor(modelItem => item.Price)</td> *@
-@*                 <td>@Html.DisplayFor(modelItem => item.StockQuantity)</td> *@
-@*                 <td>@Html.DisplayFor(modelItem => item.Size)</td> *@
-@*                 <td> *@
-@*                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | *@
-@*                     @Html.ActionLink("Details", "Details", new { id = item.Id }) | *@
-@*                     @Html.ActionLink("Delete", "Delete", new { id = item.Id }) *@
-@*                 </td> *@
-@*             </tr> *@
-@*         } *@
-   
-@* </table> *@
+    <script>
+        $(document).ready(function () {
+            $("#searchBox").on("input", function () {
+                var query = $(this).val().trim();
+                
+                if (query.length > 1) {
+                    $.ajax({
+                        url: '@Url.Action("Search", "Product")',
+                        type: 'GET',
+                        data: { term: query },
+                        success: function (data) {
+                            var suggestions = $("#suggestions");
+                            suggestions.empty();
+                            
+                            if (data.length > 0) {
+                                data.forEach(function (item) {
+                                    suggestions.append(
+                                        `<li class="list-group-item suggestion-item" data-id="${item.id}">${item.name} - ${item.brand} (${item.category}) - $${item.price}</li>`
+                                    );
+                                });
+
+                                suggestions.show(); 
+                            } else {
+                                suggestions.append("<li class='list-group-item'>No results found</li>").show();
+                            }
+                        }
+                    });
+
+                    $.ajax({
+                        url: '@Url.Action("FilterProducts", "Product")',
+                        type: 'GET',
+                        data: { term: query },
+                        success: function (html) {
+                            $("#searchResults").html(html);
+                        }
+                    });
+
+                } else {
+                    $("#suggestions").hide();
+                    $("#searchResults").load('@Url.Action("Index", "Product") #searchResults'); // Reset product list
+                }
+            });
+
+            $(document).on("click", ".suggestion-item", function () {
+                var selectedText = $(this).text();
+                $("#searchBox").val(selectedText);
+                $("#suggestions").hide();
+            });
+
+            $(document).on("click", function (e) {
+                if (!$(e.target).closest("#searchBox, #suggestions").length) {
+                    $("#suggestions").hide();
+                }
+            });
+        });
+    </script>
+}
+
+
+<style>
+    #suggestions {
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        background: white;
+        border: 1px solid #ddd;
+        max-height: 200px;
+        overflow-y: auto;
+        
+    }
+
+    .suggestion-item {
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+
+    .suggestion-item:hover {
+        background-color: #f0f0f0;
+    }
+</style> 

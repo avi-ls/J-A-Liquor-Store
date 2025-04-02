@@ -6,13 +6,12 @@ using System.Linq;
 namespace LiquorStore.Controllers
 {
     public class ProductController : Controller
-    {
-        private readonly LSContext _context;
+    {         private readonly LSContext _context;
 
         public ProductController(LSContext context)
         {
             _context = context;
-        }
+        } 
 
         public IActionResult Index()
         {
@@ -26,7 +25,7 @@ namespace LiquorStore.Controllers
 
             if (product == null)
             {
-                return NotFound(); 
+                return NotFound();
             }
             return View(product);
         }
@@ -89,6 +88,39 @@ namespace LiquorStore.Controllers
             }
             return View(product);
         }
+
+        [HttpGet]
+
+        public IActionResult Search(string term)
+        {
+            if (string.IsNullOrEmpty(term))
+            {
+                return Content(""); 
+            }
+
+            var results = _context.Products
+                .Where(p => p.Name.Contains(term) || p.Category.Contains(term) || p.Brand.Contains(term))
+                .Select(p => new
+                {
+                    id = p.Id,
+                    name = p.Name,
+                    category = p.Category,
+                    brand = p.Brand,
+                    price = p.Price
+                })
+                .ToList();
+
+            return Json(results);
+        }
+        public IActionResult FilterProducts(string term)
+        {
+            var filteredProducts = _context.Products
+                .Where(p => p.Name.Contains(term) || p.Category.Contains(term) || p.Brand.Contains(term))
+                .ToList();
+
+            return PartialView("_DisplayProducts", filteredProducts);
+        }
+
 
 
         [HttpPost]
