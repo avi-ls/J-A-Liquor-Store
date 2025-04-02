@@ -95,11 +95,18 @@ namespace LiquorStore.Controllers
         {
             if (string.IsNullOrEmpty(term))
             {
-                return Content(""); 
+                return Content("");
             }
 
+            // Convert search term to lowercase
+            string termLower = term.ToLower();
+
             var results = _context.Products
-                .Where(p => p.Name.Contains(term) || p.Category.Contains(term) || p.Brand.Contains(term))
+                .Where(p =>
+                    p.Name.ToLower().Contains(termLower) ||
+                    p.Category.ToLower().Contains(termLower) ||
+                    p.Brand.ToLower().Contains(termLower)
+                )
                 .Select(p => new
                 {
                     id = p.Id,
@@ -112,10 +119,18 @@ namespace LiquorStore.Controllers
 
             return Json(results);
         }
+
         public IActionResult FilterProducts(string term)
         {
+            // Convert search term to lowercase
+            string termLower = term.ToLower();
+
             var filteredProducts = _context.Products
-                .Where(p => p.Name.Contains(term) || p.Category.Contains(term) || p.Brand.Contains(term))
+                .Where(p =>
+                    p.Name.ToLower().Contains(termLower) ||
+                    p.Category.ToLower().Contains(termLower) ||
+                    p.Brand.ToLower().Contains(termLower)
+                )
                 .ToList();
 
             return PartialView("_DisplayProducts", filteredProducts);

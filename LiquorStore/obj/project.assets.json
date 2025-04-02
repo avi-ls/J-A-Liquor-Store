@@ -8055,11 +8055,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\avina\\Documents\\Store Project\\LiquorStore\\LiquorStore.csproj",
+      "projectUniqueName": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\LiquorStore.csproj",
       "projectName": "LiquorStore",
-      "projectPath": "C:\\Users\\avina\\Documents\\Store Project\\LiquorStore\\LiquorStore.csproj",
+      "projectPath": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\LiquorStore.csproj",
       "packagesPath": "C:\\Users\\avina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\avina\\Documents\\Store Project\\LiquorStore\\obj\\",
+      "outputPath": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
