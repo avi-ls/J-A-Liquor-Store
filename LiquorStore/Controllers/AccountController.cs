@@ -1,5 +1,6 @@
 ﻿using LiquorStore.Models;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol;
 
 public class AccountController : Controller
 {
@@ -82,4 +83,13 @@ public class AccountController : Controller
         return View();
     }
 
+
+    [HttpGet]
+    public JsonResult IsUserNameAvailable(string userName)
+    {
+        bool isAvailable = !_context.Account
+            .Any(u => u.UserName.ToLower() == userName.Trim().ToLower());
+
+        return Json(new { isAvailable });
+    }
 }
