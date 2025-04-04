@@ -3,6 +3,7 @@ using System;
 using LiquorStore.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,31 +11,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LiquorStore.Migrations
 {
     [DbContext(typeof(LSContext))]
-    partial class LSContextModelSnapshot : ModelSnapshot
+    [Migration("20250404053831_Update-USERS")]
+    partial class UpdateUSERS
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
-
-            modelBuilder.Entity("LiquorStore.Models.Account", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Account");
-                });
 
             modelBuilder.Entity("LiquorStore.Models.Customer", b =>
                 {

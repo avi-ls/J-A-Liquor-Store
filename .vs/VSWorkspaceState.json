@@ -4,8 +4,8 @@
     "\\LiquorStore",
     "\\LiquorStore\\Controllers",
     "\\LiquorStore\\Models",
-    "\\LiquorStore\\Views"
+    "\\LiquorStore\\Views",
+    "\\LiquorStore\\Views\\Customer"
   ],
-  "SelectedNode": "\\LiquorStore\\Models",
   "PreviewInSolutionExplorer": false
 }
