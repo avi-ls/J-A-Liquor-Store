@@ -4,9 +4,6 @@
     ViewData["Title"] = "Home";
 }
 
-
-<html>
-<body>
     <div>
         <h1 style="font-size: 75px; font-family: 'Brush Script MT';text-align: center">J & A Liqour and Spirits</h1><br /><br />
     </div>
@@ -36,36 +33,33 @@
         </table>
     </div>
     <div> 
-         <h2>Categories</h2> 
+        <div style="text-align: center;">
+         <h2 >Categories</h2> 
+         </div>
          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 20%; margin: 0 auto; justify-content: center; align-items: center; text-align: center;"> 
              <div> 
-                 <a asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Whiskey"/>
+                 <a asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Whiskey">
                  <img style="height: 200px; width: 200px;" src="~/Images/istockphoto-1140849064-612x612.jpg" /> 
                  <h2>Whiskey</h2> 
-                
+                 </a>
              </div> 
             <div>
-                <a asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Liquor"/>
+                <a asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Liquor">
                 <img style="height: 200px; width: 200px;" src="~/Images/download.jpg" />
                 <h2>Liquor</h2> 
+                </a>
              </div> 
             <div> 
-                <a asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Vodka"/>
-                <img style="height: 200px; width: 200px;" src="~/Images/Screenshot 2025-03-17 031817.png" />
+                <a asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Vodka">
+                <img style="height: 200px; width: 200px;" src="~/Images/Screenshot 2025-03-17 031817.png"/>
                 <h2>Vodka</h2>
+                </a>
              </div>
          </div>
         
     </div> 
-</body>
-</html>
 
 
-@* <h1>Welcome to the Liquor Store</h1> *@
 
-@* <ul> *@
-@*     <li><a asp-controller="Product" asp-action="Index">View Products</a></li> *@
-@*     <li><a asp-controller="Order" asp-action="Index">View Orders</a></li> *@
-@*     <li><a asp-controller="Customer" asp-action="Index">View Customers</a></li> *@
-@*     <li><a asp-controller="Employee" asp-action="Index">View Employees</a></li> *@
-@* </ul> *@
+
+
