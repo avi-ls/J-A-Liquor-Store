@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace LiquorStore.Controllers
 {
-    public class OrderController : Controller
+    public class OrderController : AdminController
     {
         private readonly LSContext _context;
 
