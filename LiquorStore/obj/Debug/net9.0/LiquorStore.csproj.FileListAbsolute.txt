@@ -1786,8 +1786,6 @@ C:/Users/avina/Downloads/Project/Project/Project/Project/LiquorStore/obj/Debug/n
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Azure.Core.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Azure.Identity.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Humanizer.dll
-/Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.AspNetCore.Authorization.dll
-/Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.AspNetCore.Metadata.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.AspNetCore.Razor.Language.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.Build.dll
@@ -1815,11 +1813,7 @@ C:/Users/avina/Downloads/Project/Project/Project/Project/LiquorStore/obj/Debug/n
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Sqlite.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.SqlServer.dll
-/Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
-/Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
-/Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
-/Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.Identity.Client.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.Identity.Client.Extensions.Msal.dll
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
@@ -2119,8 +2113,6 @@ C:/Users/avina/Downloads/Project/Project/Project/Project/LiquorStore/obj/Debug/n
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/compressed/uea2x37kiw-muycvpuwrr.gz
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/compressed/cmrdgpk5w0-87fc7y1x7t.gz
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/compressed/h9ji9zh1rj-jfsiqqwiad.gz
-/Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/compressed/01kld5y2cc-wafriegxe9.gz
-/Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/compressed/4y3vgwtluc-wafriegxe9.gz
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/staticwebassets.build.json
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/staticwebassets.development.json
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/staticwebassets.build.endpoints.json
@@ -2136,3 +2128,5 @@ C:/Users/avina/Downloads/Project/Project/Project/Project/LiquorStore/obj/Debug/n
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/LiquorStore.pdb
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/LiquorStore.genruntimeconfig.cache
 /Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/ref/LiquorStore.dll
+/Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/compressed/01kld5y2cc-wafriegxe9.gz
+/Users/joshuadeirish/Desktop/webproject/J-A-Liquor-Store-1/LiquorStore/obj/Debug/net9.0/compressed/4y3vgwtluc-wafriegxe9.gz
