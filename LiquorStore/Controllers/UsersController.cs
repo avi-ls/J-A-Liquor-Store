@@ -6,16 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LiquorStore.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authorization;
-
-
 
 namespace LiquorStore.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly PasswordHasher<User> _passwordHasher = new PasswordHasher<User>();
         private readonly LSContext _context;
 
         public UsersController(LSContext context)
@@ -101,7 +96,9 @@ namespace LiquorStore.Controllers
             return View(user);
         }
 
-       
+        // POST: Users/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Email,PhoneNumber")] User user)
@@ -171,136 +168,5 @@ namespace LiquorStore.Controllers
         {
             return _context.User.Any(e => e.Id == id);
         }
-    [HttpGet]
-    public IActionResult Register()
-        {
-            return View();
-        }
-        [HttpGet]
-        public IActionResult AdminRegister()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Register(User user)
-        {
-            if (ModelState.IsValid)
-            {
-                var existingUser = _context.User
-                    .FirstOrDefault(u => u.UserName == user.UserName);
-
-                if (existingUser == null)
-                {
-                    user.Password = _passwordHasher.HashPassword(user, user.Password);
-
-                    _context.User.Add(user);
-                    _context.SaveChanges();
-                    return RedirectToAction("Login");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Username already exists");
-                }
-            }
-            return View(user);
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult AdminRegister(User user, string secret)
-        {
-            if (secret != "Admin123")
-            {
-                ModelState.AddModelError("", "Invalid Code.");
-                return View(user);
-            }
-            if (ModelState.IsValid)
-            {
-                var existingUser = _context.User.FirstOrDefault(u => u.UserName == user.UserName);
-                if (existingUser == null)
-                {
-                    user.Password = _passwordHasher.HashPassword(user, user.Password);
-                    user.Role = "Admin";
-
-                    _context.User.Add(user);
-                    _context.SaveChanges();
-
-                    return RedirectToAction("Login");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Username already exists");
-                }
-            }
-            return View(user);
-        }
-
-        [HttpGet]
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-public IActionResult Login([FromForm] User user)
-{
-    if (ModelState.IsValid)
-    {
-        var existingUser = _context.User.FirstOrDefault(u => u.UserName == user.UserName);
-        if (existingUser != null)
-        {
-            var result = _passwordHasher.VerifyHashedPassword(existingUser, existingUser.Password, user.Password);
-            if (result == PasswordVerificationResult.Success)
-            {
-                HttpContext.Session.SetString("userId", existingUser.Id.ToString());
-                HttpContext.Session.SetString("username", existingUser.UserName);
-                HttpContext.Session.SetString("role", existingUser.Role);
-
-                return Json(new { success = true, redirectUrl = Url.Action("Index", "Home") });
-            }
-        }
-
-        return Json(new { success = false, message = "Username or password is incorrect" });
-    }
-
-    return Json(new { success = false, message = "Invalid input" });
-}
-
-
-
-
-        public IActionResult LoggedIn()
-        {
-            // Check if user is actually logged in
-            if (string.IsNullOrEmpty(HttpContext.Session.GetString("userId")))
-            {
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Logout()
-        {
-            HttpContext.Session.Clear();
-            return RedirectToAction("Login", "Users");
-        }
-
-
-        [HttpGet]
-        public JsonResult IsUserNameAvailable(string userName)
-        {
-            bool isAvailable = !_context.User
-                .Any(u => u.UserName.ToLower() == userName.Trim().ToLower());
-
-            return Json(new { isAvailable });
-        }
-        [Authorize(Roles = "Admin")]
-        public IActionResult AdminPanel()
-        {
-            return View();
-        }
-
     }
 }
