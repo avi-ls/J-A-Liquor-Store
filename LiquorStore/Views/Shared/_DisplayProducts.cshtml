@@ -9,6 +9,15 @@
             @Html.DisplayFor(modelItem => item.Brand)<br />
             @Html.DisplayFor(modelItem => item.Category)<br />
             @Html.DisplayFor(modelItem => item.Price) <br />
+
+            @if (item.StockQuantity > 0)
+            {
+                <button class="add-to-cart" data-product-id="@item.Id">Add to Cart</button>
+            }
+            else
+            {
+                <button disabled>Out of Stock</button>
+            }
         </div>
     }
 </div>

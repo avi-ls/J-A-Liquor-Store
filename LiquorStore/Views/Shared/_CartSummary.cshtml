@@ -1,0 +1,12 @@
+﻿@using LiquorStore.Models
+@using LiquorStore.Extensions
+@{
+    var cart = Context.Session.GetObject<Cart>("Cart") ?? new Cart();
+}
+
+<div id="cartSummary" class="nav-item">
+    <a class="nav-link" asp-controller="Cart" asp-action="Index">
+        🛒 Cart (<span id="cartItemCount">@cart.Items.Sum(i => i.Quantity)</span>)
+        - Total: $<span id="cartGrandTotal">@cart.GrandTotal.ToString("0.00")</span>
+    </a>
+</div>

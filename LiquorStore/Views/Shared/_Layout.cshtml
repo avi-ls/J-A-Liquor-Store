@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +43,9 @@
                         </li>
                         <li>
                             <a class="nav-link" asp-controller="Product" asp-action="Categories">Categories</a>
+                        </li>
+                        <li class="nav-item" style="align-items: end;">
+                            @await Html.PartialAsync("_CartSummary")
                         </li>
 
                     </ul>

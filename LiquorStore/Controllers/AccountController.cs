@@ -17,6 +17,11 @@ public class AccountController : Controller
         return View();
     }
 
+    public IActionResult AdminRegister()
+    {
+        return View();
+    }
+
     [HttpPost]
     [ValidateAntiForgeryToken]
     public IActionResult Register(Account user)

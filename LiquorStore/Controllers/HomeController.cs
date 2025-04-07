@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using LiquorStore.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LiquorStore.Controllers;
 
@@ -19,7 +20,6 @@ public class HomeController : Controller
         _logger = logger;
         _context = context;
     }
-
     public IActionResult Index()
     {
         var products = _context.Products.Where(p => p.Category == "Tequila");
