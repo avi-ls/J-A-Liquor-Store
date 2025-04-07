@@ -1,0 +1,49 @@
+﻿@model LiquorStore.Models.User
+
+<h2>Login</h2>
+
+<form id="loginForm">
+    @Html.AntiForgeryToken()
+    <div>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div>
+        <span id="loginError" class="text-danger"></span>
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#loginForm').submit(function (e) {
+                e.preventDefault(); // prevent normal form submit
+
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("Login", "Users")',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            window.location.href = response.redirectUrl;
+                        } else {
+                            $('#loginError').text(response.message);
+                        }
+                    },
+                    error: function () {
+                        $('#loginError').text("Something went wrong.");
+                    }
+                });
+            });
+        });
+    </script>
+}
