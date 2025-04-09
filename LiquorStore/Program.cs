@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using LiquorStore.Models; 
+using LiquorStore.Models;
+using Microsoft.AspNetCore.DataProtection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,7 @@ if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddDbContext<LSContext>(options =>
         options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    builder.Services.AddDataProtection().UseEphemeralDataProtectionProvider();
 }
 else
 {
@@ -14,6 +16,9 @@ else
         options.UseSqlServer(builder.Configuration.GetConnectionString("RealConnection")));
 }
 
+
+
+// Rest of your existing configuration...
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);

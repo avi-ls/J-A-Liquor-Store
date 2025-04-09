@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|c:\\users\\avina\\downloads\\project\\project\\project\\project\\liquorstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|c:\\users\\avina\\downloads\\project\\project\\project\\project\\liquorstore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|c:\\users\\avina\\downloads\\project\\project\\project\\project\\liquorstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,16 +19,8 @@
       "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|c:\\users\\avina\\downloads\\project\\project\\project\\project\\liquorstore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|c:\\users\\avina\\downloads\\project\\project\\project\\project\\liquorstore\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|c:\\users\\avina\\downloads\\project\\project\\project\\project\\liquorstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|c:\\users\\avina\\downloads\\project\\project\\project\\project\\liquorstore\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,24 +50,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "LiquorStore\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-09T21:31:10.053Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Product\\Index.cshtml",
@@ -75,18 +75,17 @@
               "RelativeToolTip": "LiquorStore\\Views\\Product\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T21:29:25.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T21:29:25.808Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\Program.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Program.cs",
               "ToolTip": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\Program.cs",
               "RelativeToolTip": "LiquorStore\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAIwEoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T21:17:40.613Z",
               "EditorCaption": ""
@@ -101,8 +100,7 @@
               "RelativeToolTip": "LiquorStore\\Views\\Account\\Register.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T21:16:57.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T21:16:57.04Z"
             },
             {
               "$type": "Document",
@@ -114,12 +112,11 @@
               "RelativeToolTip": "LiquorStore\\Models\\Account.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAgwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T06:19:13.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T06:19:13.764Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Controllers\\AccountController.cs",
@@ -127,8 +124,7 @@
               "RelativeToolTip": "LiquorStore\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAADwv18AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T04:48:09.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T04:48:09.106Z"
             },
             {
               "$type": "Document",
@@ -156,13 +152,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\avina\\Downloads\\Project\\Project\\Project\\Project\\LiquorStore\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "LiquorStore\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwB4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-06T21:50:32.066Z",
               "EditorCaption": ""
