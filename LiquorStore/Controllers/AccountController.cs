@@ -104,6 +104,19 @@ public class AccountController : Controller
         return View();
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Logout()
+    {
+        // Sign out the user
+        await HttpContext.SignOutAsync("Cookies");
+
+        // Clear session data (optional)
+        HttpContext.Session.Clear();
+
+        return RedirectToAction("Index", "Home");
+    }
+
 
     [HttpGet]
     public JsonResult IsUserNameAvailable(string userName)
