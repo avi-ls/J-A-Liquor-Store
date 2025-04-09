@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace LiquorStore.Models
 {
     [Table("Account")]
+
     public class Account
     {
         [Key]
@@ -17,6 +18,8 @@ namespace LiquorStore.Models
         [Required(ErrorMessage = "Please Enter a password")]
         [DataType(DataType.Password)]
         public String Password { get; set; }
+
+        public String Role { get; set; } = "User";
 
         public Account()
         {

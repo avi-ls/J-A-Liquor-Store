@@ -1,4 +1,7 @@
-﻿using LiquorStore.Models;
+﻿using System.Security.Claims;
+using LiquorStore.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol;
 
@@ -16,12 +19,6 @@ public class AccountController : Controller
     {
         return View();
     }
-
-    public IActionResult AdminRegister()
-    {
-        return View();
-    }
-
     [HttpPost]
     [ValidateAntiForgeryToken]
     public IActionResult Register(Account user)
@@ -45,6 +42,13 @@ public class AccountController : Controller
         }
         return View(user);
     }
+    [Authorize(Roles = "Admin")]
+    public IActionResult AdminRegister()
+    {
+        return View();
+    }
+
+
 
     public ActionResult Login()
     {
@@ -53,18 +57,31 @@ public class AccountController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Login(Account user)
+    public async Task<IActionResult> Login(Account user)
     {
         if (ModelState.IsValid)
         {
-            // Check if user exists with matching credentials
             var existingUser = _context.Account
                 .FirstOrDefault(u => u.UserName == user.UserName &&
                                     u.Password == user.Password);
 
             if (existingUser != null)
             {
-                // Store user info in session
+                // Create claims
+                var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, existingUser.Id.ToString()),
+                new Claim(ClaimTypes.Name, existingUser.UserName),
+                new Claim(ClaimTypes.Role, existingUser.Role)
+            };
+
+                var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
+                var principal = new ClaimsPrincipal(claimsIdentity);
+
+                // Sign in the user
+                await HttpContext.SignInAsync("Cookies", principal);
+
+                // Optional: Store additional info in session if needed
                 HttpContext.Session.SetString("userId", existingUser.Id.ToString());
                 HttpContext.Session.SetString("username", existingUser.UserName);
 
@@ -77,7 +94,6 @@ public class AccountController : Controller
         }
         return View(user);
     }
-
     public IActionResult LoggedIn()
     {
         // Check if user is actually logged in

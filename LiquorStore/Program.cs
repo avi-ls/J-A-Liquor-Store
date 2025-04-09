@@ -38,6 +38,7 @@ builder.Services.AddAuthentication(options =>
     options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
 });
 
+
 // Add authorization
 builder.Services.AddAuthorization(options =>
 {
