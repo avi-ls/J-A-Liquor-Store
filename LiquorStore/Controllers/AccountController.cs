@@ -67,7 +67,6 @@ public class AccountController : Controller
 
             if (existingUser != null)
             {
-                // Create claims
                 var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, existingUser.Id.ToString()),
@@ -78,10 +77,8 @@ public class AccountController : Controller
                 var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
                 var principal = new ClaimsPrincipal(claimsIdentity);
 
-                // Sign in the user
                 await HttpContext.SignInAsync("Cookies", principal);
 
-                // Optional: Store additional info in session if needed
                 HttpContext.Session.SetString("userId", existingUser.Id.ToString());
                 HttpContext.Session.SetString("username", existingUser.UserName);
 
