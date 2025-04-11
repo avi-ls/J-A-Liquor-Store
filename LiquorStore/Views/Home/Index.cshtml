@@ -1,9 +1,13 @@
 ﻿@model IEnumerable<LiquorStore.Models.Product>
 
+
 @{
     ViewData["Title"] = "Home";
 }
-
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Welcome @User.Identity.Name</p>
+}
     <div>
         <h1 style="font-size: 75px; font-family: 'Brush Script MT';text-align: center">J & A Liqour and Spirits</h1><br /><br />
     </div>

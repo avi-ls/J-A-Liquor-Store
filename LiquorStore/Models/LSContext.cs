@@ -11,7 +11,6 @@ namespace LiquorStore.Models{
             public DbSet<Customer> Customers { get; set; }
             public DbSet<Order> Orders { get; set; }
             public DbSet<Employee> Employees { get; set; }
-            public DbSet<User> User { get; set; }
             public DbSet<Account> Account { get; set; }
 
     }
