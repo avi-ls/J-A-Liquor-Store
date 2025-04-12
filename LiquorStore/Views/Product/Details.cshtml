@@ -7,6 +7,14 @@
 <h2>Product Details</h2>
 
 <table class="table">
+    @if (Model.Image != null && Model.Image.Length > 0)
+            {
+                <img style="width: 100%; object-fit: contain; height: 300px;" src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Image))" />
+            }       
+            else
+            {
+                <img style="width: 100%; object-fit: contain; height: 300px;" src="~/Images/251876.jpg.thumb.319.319.png" />
+            }
     <tr>
         <th>Name:</th>
         <td>@Model.Name</td>

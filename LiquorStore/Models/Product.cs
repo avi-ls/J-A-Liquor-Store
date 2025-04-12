@@ -32,6 +32,11 @@ namespace LiquorStore.Models
         [StringLength(50)]
         public string Size { get; set; }
 
+        public byte[] Image { get; set; }
+
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
+
         public Product()
         {
 

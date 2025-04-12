@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
@@ -44,6 +44,20 @@
                 <span asp-validation-for="Size" class="text-danger"></span>
             </div>
             <div class="form-group">
+                @if (Model.Image != null && Model.Image.Length > 0)
+                {
+                    var base64Image = "data:image/png;base64," + Convert.ToBase64String(Model.Image);
+                    <label>Current Image</label>
+                
+                    <br />
+                    <img src="@base64Image" alt="Current Product Image"
+                        style="max-width: 100%; height: auto; margin-bottom: 10px;" />
+                }
+                <label asp-for="Image" class="control-label"></label>
+                <input type="file" name="ImageFile" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessage("Image")</span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
@@ -55,5 +69,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

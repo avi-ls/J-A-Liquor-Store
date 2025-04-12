@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LiquorStore.styles.css" asp-append-version="true" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://crafteddecor.ca/products/eisch-stemware-red-wine-glass" /> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body style="margin-bottom: 0px;">
+    <div class="d-flex flex-column min-vh-100">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
             style="width: 100%">
@@ -76,13 +78,13 @@
             @RenderBody()
         </main>
     </div>
-    <br>
+    
 
-    <footer >
+    <footer class="mt-auto" style="background-color: black;">
         <div class="container items-center">
         <div  class="row align-items-start">
             <div class="col">
-            <ul>
+            <ul style="list-style-type: none; text-align: center;">
                 <li>
                     <h3 style="color: white;">Site Links</h3>
                 </li>
@@ -110,9 +112,9 @@
             </div>
             <div class="col d-flex justify-content-center flex-wrap">
                 <h3 style="color: white; width: 100%; text-align: center;">Connect With Us</h3>
-                <img style="width: 15%;" src="~/images/facebook.png" /> 
-                <img style="width: 15%;" src="~/images/instagram.png" /> 
-                <img style="width: 15%;" src="~/images/twitter.png" />  
+                <img style="width: 15%; background-color: white; border-radius: 50px;" src="~/images/facebook.png" /> 
+                <img style="width: 15%; background-color: white; border-radius: 50px;" src="~/images/instagram.png" /> 
+                <img style="width: 15%; background-color: white; border-radius: 50px;" src="~/images/twitter.png" />  
             </div>
             <div class="col">
                 <h3 style="color: white;">Sign Up For Emails</h3>
@@ -128,6 +130,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    </div>
 </body>
 
 </html>

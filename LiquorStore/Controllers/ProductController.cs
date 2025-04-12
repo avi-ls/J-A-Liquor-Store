@@ -3,17 +3,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
+
 namespace LiquorStore.Controllers
 {
     public class ProductController : Controller
-    {         private readonly LSContext _context;
+    {
+        private readonly LSContext _context;
 
         public ProductController(LSContext context)
         {
             _context = context;
-        } 
+        }
 
         public IActionResult Index()
+        {
+            var products = _context.Products.ToList();
+            return View(products);
+        }
+        public IActionResult ProductList()
         {
             var products = _context.Products.ToList();
             return View(products);
@@ -63,16 +70,34 @@ namespace LiquorStore.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Category,Brand,Price,StockQuantity,Size")] Product product)
+        public async Task<IActionResult> Create(Product product)
         {
+            Console.WriteLine("ImageFile: " + (product.ImageFile != null ? product.ImageFile.FileName : "null"));
+            ModelState.Remove("Image");
+            if (product.ImageFile != null && product.ImageFile.Length > 0)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await product.ImageFile.CopyToAsync(memoryStream);
+                    product.Image = memoryStream.ToArray();
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("Image", "Image is required.");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(product);
         }
+
+
 
         public async Task<IActionResult> Edit(int? id)
         {
@@ -122,7 +147,6 @@ namespace LiquorStore.Controllers
 
         public IActionResult FilterProducts(string term)
         {
-            // Convert search term to lowercase
             string termLower = term.ToLower();
 
             var filteredProducts = _context.Products
@@ -140,19 +164,58 @@ namespace LiquorStore.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Category,Brand,Price,StockQuantity,Size")] Product product)
+        public async Task<IActionResult> Edit(int id, Product product, IFormFile ImageFile)
+
         {
+
+
             if (id != product.Id)
             {
                 return NotFound();
             }
 
+            var productToUpdate = await _context.Products.FindAsync(id);
+            if (productToUpdate == null)
+            {
+                return NotFound();
+            }
+
+            ModelState.Remove("Image");
+
+            productToUpdate.Name = product.Name;
+            productToUpdate.Category = product.Category;
+            productToUpdate.Brand = product.Brand;
+            productToUpdate.Price = product.Price;
+            productToUpdate.StockQuantity = product.StockQuantity;
+            productToUpdate.Size = product.Size;
+
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                var allowedTypes = new[] { "image/jpeg", "image/png", "image/jpg" };
+                if (!allowedTypes.Contains(ImageFile.ContentType.ToLower()))
+                {
+                    ModelState.AddModelError("Image", "Only JPG and PNG files are allowed.");
+                    return View(productToUpdate);
+                }
+
+                using (var ms = new MemoryStream())
+                {
+                    await ImageFile.CopyToAsync(ms);
+                    productToUpdate.Image = ms.ToArray();
+                }
+
+                _context.Entry(productToUpdate).Property(p => p.Image).IsModified = true;
+            }
+            Console.WriteLine("Image length: " + (productToUpdate.Image?.Length ?? 0));
+            
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(product);
+                    Console.WriteLine("Image length: " + (productToUpdate.Image?.Length ?? 0));
+                    _context.Update(productToUpdate);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -165,10 +228,12 @@ namespace LiquorStore.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(product);
+
+            return View(productToUpdate);
         }
+
+
 
         public async Task<IActionResult> Delete(int? id)
         {
