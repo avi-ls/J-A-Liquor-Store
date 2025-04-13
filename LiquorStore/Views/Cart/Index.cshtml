@@ -37,7 +37,7 @@
             <tfoot>
                 <tr>
                     <td colspan="3" class="text-right"><strong>Grand Total:</strong></td>
-                    <td>$@Model.GrandTotal</td>
+                    <td id="cartPageGrandTotal">$@Model.GrandTotal</td>
                     <td></td>
                 </tr>
             </tfoot>
@@ -63,7 +63,9 @@
                     if (response.success) {
                         row.remove();
                         $("#cartItemCount").text(response.itemCount);
-                        $("#cartGrandTotal").text("$" + response.grandTotal.toFixed(2));
+
+                        // Update BOTH grand totals
+                        $("#cartGrandTotal, #cartPageGrandTotal").text("$" + response.grandTotal.toFixed(2));
 
                         if (response.itemCount === 0) {
                             $("#cartContents").html("<p>Your cart is empty</p>");
