@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LiquorStore.Models
@@ -18,7 +18,8 @@ namespace LiquorStore.Models
         public string PhoneNumber { get; set; }
         public List<Order> Orders { get; set; } = new List<Order>();
 
-        public Customer() {
+        public Customer()
+        {
 
         }
     }

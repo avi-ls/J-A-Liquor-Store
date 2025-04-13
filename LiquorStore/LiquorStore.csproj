@@ -25,4 +25,8 @@
     <None Include="wwwroot\Images\251876.jpg.thumb.319.319.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Order\" />
+  </ItemGroup>
+
 </Project>
