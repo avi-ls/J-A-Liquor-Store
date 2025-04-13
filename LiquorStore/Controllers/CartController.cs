@@ -74,5 +74,23 @@ namespace LiquorStore.Controllers
                 grandTotal = cart.GrandTotal
             });
         }
+        public IActionResult Checkout()
+        {
+            var cart = HttpContext.Session.GetObject<Cart>("Cart");
+            if (cart == null || !cart.Items.Any()) return RedirectToAction("Index");
+
+            // Calculate totals
+            var subtotal = cart.GrandTotal;
+            var tax = subtotal * 0.13m;
+            var shipping = 4.99m;
+            var total = subtotal + tax + shipping;
+
+            // Store in TempData to pass to the next action
+            TempData["Total"] = total;
+
+            return View();
+        }
+
+
     }
 }
