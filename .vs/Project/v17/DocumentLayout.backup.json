@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\J-A-Liquor-Store\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|d:\\j-a-liquor-store\\liquorstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|d:\\j-a-liquor-store\\liquorstore\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -99,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\views\\shared\\_cartsummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|d:\\j-a-liquor-store\\liquorstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|d:\\j-a-liquor-store\\liquorstore\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4AC9ED21-D72E-4BE2-8ECA-E668F4B9E325}|LiquorStore\\LiquorStore.csproj|solutionrelative:liquorstore\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -130,11 +130,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Models\\Product.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Models\\Product.cs",
@@ -147,20 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SessionExtensions.cs",
-              "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Models\\SessionExtensions.cs",
-              "RelativeDocumentMoniker": "LiquorStore\\Models\\SessionExtensions.cs",
-              "ToolTip": "D:\\J-A-Liquor-Store\\LiquorStore\\Models\\SessionExtensions.cs",
-              "RelativeToolTip": "LiquorStore\\Models\\SessionExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T05:41:06.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ProductController.cs",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Controllers\\ProductController.cs",
@@ -168,12 +155,11 @@
               "RelativeToolTip": "LiquorStore\\Controllers\\ProductController.cs",
               "ViewState": "AgIAABUBAAAAAAAAAAAqwIoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T05:40:45.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:40:45.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Controllers\\AccountController.cs",
@@ -181,12 +167,11 @@
               "RelativeToolTip": "LiquorStore\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAGcAAAAAAAAAAADwv2kAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T05:40:10.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:40:10.583Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Account.cs",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Models\\Account.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Models\\Account.cs",
@@ -194,12 +179,11 @@
               "RelativeToolTip": "LiquorStore\\Models\\Account.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T05:40:04.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:40:04.363Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AdminRegister.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Account\\AdminRegister.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Account\\AdminRegister.cshtml",
@@ -207,12 +191,36 @@
               "RelativeToolTip": "LiquorStore\\Views\\Account\\AdminRegister.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-14T05:39:45.199Z",
+              "WhenOpened": "2025-04-14T05:39:45.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LiquorStore\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LiquorStore\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAqwBUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T21:50:32.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "SessionExtensions.cs",
+              "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Models\\SessionExtensions.cs",
+              "RelativeDocumentMoniker": "LiquorStore\\Models\\SessionExtensions.cs",
+              "ToolTip": "D:\\J-A-Liquor-Store\\LiquorStore\\Models\\SessionExtensions.cs",
+              "RelativeToolTip": "LiquorStore\\Models\\SessionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:41:06.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Account\\Login.cshtml",
@@ -220,12 +228,11 @@
               "RelativeToolTip": "LiquorStore\\Views\\Account\\Login.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-14T05:39:28.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:39:28.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Account\\Register.cshtml",
@@ -233,12 +240,11 @@
               "RelativeToolTip": "LiquorStore\\Views\\Account\\Register.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-14T05:39:20.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:39:20.054Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CartController.cs",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Controllers\\CartController.cs",
@@ -246,12 +252,11 @@
               "RelativeToolTip": "LiquorStore\\Controllers\\CartController.cs",
               "ViewState": "AgIAAGsAAAAAAAAAAAAswA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T22:01:26.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T22:01:26.977Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Account\\Index.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Account\\Index.cshtml",
@@ -259,12 +264,11 @@
               "RelativeToolTip": "LiquorStore\\Views\\Account\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-14T05:39:39.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:39:39.863Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Order\\Index.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Order\\Index.cshtml",
@@ -272,12 +276,11 @@
               "RelativeToolTip": "LiquorStore\\Views\\Order\\Index.cshtml",
               "ViewState": "AgIAAB8AAAAAAAAAAAAqwDsAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-14T05:36:11.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:36:11.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Customer.cs",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Models\\Customer.cs",
@@ -289,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Controllers\\CustomerController.cs",
@@ -301,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Checkout.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Cart\\Checkout.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Cart\\Checkout.cshtml",
@@ -309,12 +312,11 @@
               "RelativeToolTip": "LiquorStore\\Views\\Cart\\Checkout.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-13T21:08:19.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T21:08:19.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Confirmation.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Cart\\Confirmation.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Cart\\Confirmation.cshtml",
@@ -322,12 +324,11 @@
               "RelativeToolTip": "LiquorStore\\Views\\Cart\\Confirmation.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-14T05:19:16.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:19:16.25Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Cart\\Index.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Cart\\Index.cshtml",
@@ -335,12 +336,11 @@
               "RelativeToolTip": "LiquorStore\\Views\\Cart\\Index.cshtml",
               "ViewState": "AgIAAEUAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T22:01:37.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T22:01:37.286Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Customer\\Create.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Customer\\Create.cshtml",
@@ -348,12 +348,11 @@
               "RelativeToolTip": "LiquorStore\\Views\\Customer\\Create.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-14T05:07:23.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:07:23.402Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Customer\\Delete.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Customer\\Delete.cshtml",
@@ -361,12 +360,11 @@
               "RelativeToolTip": "LiquorStore\\Views\\Customer\\Delete.cshtml",
               "ViewState": "AgIAAAcAAAAAAAAAAAAIwB4AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-14T05:07:39.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:07:39.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "OrderController.cs",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Controllers\\OrderController.cs",
@@ -374,12 +372,11 @@
               "RelativeToolTip": "LiquorStore\\Controllers\\OrderController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T05:35:40.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T05:35:40.041Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Customer\\Details.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Customer\\Details.cshtml",
@@ -391,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Customer\\Edit.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Customer\\Edit.cshtml",
@@ -403,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Customer\\Index.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Customer\\Index.cshtml",
@@ -427,7 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Models\\Order.cs",
               "RelativeDocumentMoniker": "LiquorStore\\Models\\Order.cs",
@@ -448,18 +445,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-13T18:06:39.016Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "LiquorStore\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "LiquorStore\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T21:50:32.066Z"
             },
             {
               "$type": "Document",
@@ -487,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "_CartSummary.cshtml",
               "DocumentMoniker": "D:\\J-A-Liquor-Store\\LiquorStore\\Views\\Shared\\_CartSummary.cshtml",
               "RelativeDocumentMoniker": "LiquorStore\\Views\\Shared\\_CartSummary.cshtml",
