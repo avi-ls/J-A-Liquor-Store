@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "xfuSZMd38M5wfMFyK2eYB/JJpDhfXlQhyx9iftWpVR0=",
+=======
+  "Hash": "FchFZPUrC+PcZ6iXDioOZikzk1xanQhJ0EnmH+soMQI=",
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
   "Source": "LiquorStore",
   "BasePath": "_content/LiquorStore",
   "Mode": "Default",
@@ -23473,7 +23477,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Cache-Control",
@@ -23526,7 +23534,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Cache-Control",
@@ -23563,7 +23575,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Cache-Control",
@@ -23610,6 +23626,7 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
         },
         {
@@ -23748,6 +23765,9 @@
         {
           "Name": "Last-Modified",
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Cache-Control",
@@ -23808,7 +23828,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Cache-Control",
@@ -23853,7 +23877,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Cache-Control",
@@ -23908,7 +23936,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Cache-Control",
@@ -23969,7 +24001,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Cache-Control",
@@ -24014,7 +24050,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Cache-Control",
@@ -24040,7 +24080,148 @@
         },
         {
           "Name": "integrity",
+<<<<<<< HEAD
           "Value": "sha256-lVApwNtjLf2y2OFAvw683UWohS/nzNgsMlmEkYGiQRQ="
+=======
+          "Value": "sha256-TY87gCHp8M21FDQ+3fNLfkLTJc/m7zBl+wxrifFaFKI="
+        }
+      ]
+    },
+    {
+      "Route": "LiquorStore.styles.css",
+      "AssetFile": "D:\\J-A-Liquor-Store\\LiquorStore\\obj\\Debug\\net9.0\\compressed\\01kld5y2cc-rugnlncjvg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001858736059"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "537"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TY87gCHp8M21FDQ+3fNLfkLTJc/m7zBl+wxrifFaFKI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"7dk96k624iqnijAaL1dgta0ioSTxlfzvJtLhMfMprfA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7dk96k624iqnijAaL1dgta0ioSTxlfzvJtLhMfMprfA="
+        }
+      ]
+    },
+    {
+      "Route": "LiquorStore.styles.css",
+      "AssetFile": "D:\\J-A-Liquor-Store\\LiquorStore\\obj\\Debug\\net9.0\\scopedcss\\bundle\\LiquorStore.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1146"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7dk96k624iqnijAaL1dgta0ioSTxlfzvJtLhMfMprfA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7dk96k624iqnijAaL1dgta0ioSTxlfzvJtLhMfMprfA="
+        }
+      ]
+    },
+    {
+      "Route": "LiquorStore.styles.css.gz",
+      "AssetFile": "D:\\J-A-Liquor-Store\\LiquorStore\\obj\\Debug\\net9.0\\compressed\\01kld5y2cc-rugnlncjvg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "537"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TY87gCHp8M21FDQ+3fNLfkLTJc/m7zBl+wxrifFaFKI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TY87gCHp8M21FDQ+3fNLfkLTJc/m7zBl+wxrifFaFKI="
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         }
       ]
     }

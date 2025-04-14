@@ -1479,8 +1479,76 @@
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "Images/vodka-category.6l1jm4bwbu.jpg",
       "AssetFile": "Images/vodka-category.jpg",
+=======
+      "Route": "LiquorStore.rugnlncjvg.styles.css",
+      "AssetFile": "LiquorStore.styles.css.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001858736059"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "537"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TY87gCHp8M21FDQ+3fNLfkLTJc/m7zBl+wxrifFaFKI=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"7dk96k624iqnijAaL1dgta0ioSTxlfzvJtLhMfMprfA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rugnlncjvg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7dk96k624iqnijAaL1dgta0ioSTxlfzvJtLhMfMprfA="
+        },
+        {
+          "Name": "label",
+          "Value": "LiquorStore.styles.css"
+        }
+      ]
+    },
+    {
+      "Route": "LiquorStore.rugnlncjvg.styles.css",
+      "AssetFile": "LiquorStore.styles.css",
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1505,7 +1573,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 14 Apr 2025 13:56:01 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         }
       ],
       "EndpointProperties": [
@@ -1624,7 +1696,15 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 14 Apr 2025 13:17:09 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         }
       ],
       "EndpointProperties": [
@@ -1765,7 +1845,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Vary",
@@ -1806,7 +1890,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         }
       ],
       "EndpointProperties": [
@@ -1847,7 +1935,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Sun, 13 Apr 2025 21:46:18 GMT"
+=======
+          "Value": "Mon, 14 Apr 2025 06:08:49 GMT"
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
         },
         {
           "Name": "Vary",

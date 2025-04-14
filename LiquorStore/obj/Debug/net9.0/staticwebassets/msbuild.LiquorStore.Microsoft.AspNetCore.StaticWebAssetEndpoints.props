@@ -1011,14 +1011,24 @@
     <StaticWebAssetEndpoint Include="_content/LiquorStore/LiquorStore.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\LiquorStore.vwdy7jk8g9.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
+<<<<<<< HEAD
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-700J/8G6gboyBbKZF8Y7pwzzH7nFSU8ppF0JukiALco="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1097"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022700J/8G6gboyBbKZF8Y7pwzzH7nFSU8ppF0JukiALco=\u0022"},{"Name":"Last-Modified","Value":"Sun, 13 Apr 2025 21:46:18 GMT"}]]]></ResponseHeaders>
+=======
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-7dk96k624iqnijAaL1dgta0ioSTxlfzvJtLhMfMprfA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1146"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00227dk96k624iqnijAaL1dgta0ioSTxlfzvJtLhMfMprfA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Apr 2025 06:08:49 GMT"}]]]></ResponseHeaders>
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LiquorStore/LiquorStore.vwdy7jk8g9.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\LiquorStore.vwdy7jk8g9.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
+<<<<<<< HEAD
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vwdy7jk8g9"},{"Name":"integrity","Value":"sha256-700J/8G6gboyBbKZF8Y7pwzzH7nFSU8ppF0JukiALco="},{"Name":"label","Value":"_content/LiquorStore/LiquorStore.bundle.scp.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1097"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022700J/8G6gboyBbKZF8Y7pwzzH7nFSU8ppF0JukiALco=\u0022"},{"Name":"Last-Modified","Value":"Sun, 13 Apr 2025 21:46:18 GMT"}]]]></ResponseHeaders>
+=======
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rugnlncjvg"},{"Name":"integrity","Value":"sha256-7dk96k624iqnijAaL1dgta0ioSTxlfzvJtLhMfMprfA="},{"Name":"label","Value":"_content/LiquorStore/LiquorStore.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1146"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00227dk96k624iqnijAaL1dgta0ioSTxlfzvJtLhMfMprfA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Apr 2025 06:08:49 GMT"}]]]></ResponseHeaders>
+>>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>
