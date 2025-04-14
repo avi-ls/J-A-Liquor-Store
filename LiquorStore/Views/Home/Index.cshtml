@@ -5,7 +5,6 @@
     var topCategories = new[] { "Whiskey", "Wine", "Vodka" };
 }
 
-<<<<<<< HEAD
 @if (User.Identity.IsAuthenticated)
 {
     <p>Welcome @User.Identity.Name</p>
@@ -79,102 +78,6 @@
                 </div>
             </div>
         }
-=======
-<div class="container-fluid p-0">
-    @if (User.Identity.IsAuthenticated)
-    {
-        <div class="alert alert-primary text-center mb-4">
-            Welcome @User.Identity.Name
-        </div>
-    }
-
-    <!-- Hero Section -->
-    <div class="jumbotron jumbotron-fluid bg-light text-center py-5 mb-0">
-        <div class="container">
-            <h1 class="display-4" style="font-family: 'Brush Script MT';">J & A Liqour and Spirits</h1>
-        </div>
->>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
-    </div>
-</div>
-
-    <!-- Promo Banner -->
-    <div class="mb-4">
-        <img class="img-fluid w-100" src="~/Images/41617 Made in Canada Campaign_PromoBanner_FA.jpg" alt="Promotional Banner" />
-    </div>
-
-    <!-- On Sale Section -->
-    <div class="container mb-5">
-        <h2 class="text-center mb-4">On Sale</h2>
-        <div class="row">
-            @foreach (var item in Model)
-            {
-                <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 250px; overflow: hidden;">
-                            @if (item.Image != null && item.Image.Length > 0)
-                            {
-                                <img class="img-fluid" style="max-height: 100%; object-fit: contain;" src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))" alt="@item.Name" />
-                            }
-                            else
-                            {
-                                <img class="img-fluid" style="max-height: 100%; object-fit: contain;" src="~/Images/251876.jpg.thumb.319.319.png" alt="Placeholder" />
-                            }
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">@Html.ActionLink(item.Name, "Details", "Product", new { id = item.Id }, new { @class = "text-decoration-none text-dark" })</h5>
-                            <p class="card-text mb-1">@Html.DisplayFor(modelItem => item.Brand)</p>
-                            <p class="card-text mb-1">@Html.DisplayFor(modelItem => item.Category)</p>
-                            <p class="card-text font-weight-bold">@Html.DisplayFor(modelItem => item.Price)</p>
-                            <button class="btn btn-dark btn-block add-to-cart" data-product-id="@item.Id">
-                                <i class="bi bi-cart-plus"></i> Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-        <div class="text-center mt-3">
-            <a href="@Url.Action("Index", "Product")" class="btn btn-outline-primary btn-lg">Shop All</a>
-        </div>
-    </div>
-
-    <!-- Categories Section -->
-    <div class="container-fluid bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Categories</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <a class="text-decoration-none" asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Whiskey">
-                            <img class="card-img-top img-fluid p-4" src="~/Images/istockphoto-1140849064-612x612.jpg" alt="Whiskey" style="height: 250px; object-fit: contain;" />
-                            <div class="card-body text-center">
-                                <h3 class="card-title text-dark">Whiskey</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <a class="text-decoration-none" asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Liquor">
-                            <img class="card-img-top img-fluid p-4" src="~/Images/download.jpg" alt="Liquor" style="height: 250px; object-fit: contain;" />
-                            <div class="card-body text-center">
-                                <h3 class="card-title text-dark">Liquor</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <a class="text-decoration-none" asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Vodka">
-                            <img class="card-img-top img-fluid p-4" src="~/Images/Screenshot 2025-03-17 031817.png" alt="Vodka" style="height: 250px; object-fit: contain;" />
-                            <div class="card-body text-center">
-                                <h3 class="card-title text-dark">Vodka</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -198,8 +101,4 @@
             }
         });
     });
-<<<<<<< HEAD
 </script>
-=======
-</script>
->>>>>>> 473b3fa077363d632b942bbe34d2d9fac4bd6af7
