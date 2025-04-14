@@ -79,16 +79,53 @@ namespace LiquorStore.Controllers
             var cart = HttpContext.Session.GetObject<Cart>("Cart");
             if (cart == null || !cart.Items.Any()) return RedirectToAction("Index");
 
-            // Calculate totals
             var subtotal = cart.GrandTotal;
             var tax = subtotal * 0.13m;
             var shipping = 4.99m;
             var total = subtotal + tax + shipping;
 
-            // Store in TempData to pass to the next action
-            TempData["Total"] = total;
+            ViewBag.Subtotal = subtotal;
+            ViewBag.Tax = tax;
+            ViewBag.Shipping = shipping;
+            ViewBag.Total = total;
 
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult PlaceOrder(string customerFirstName, string customerLastName, string address, string phone, string email, decimal total)
+        {
+            var customer = new Customer
+            {
+                FirstName = customerFirstName,
+                LastName = customerLastName,
+                Address = address,
+                Email = email,
+                PhoneNumber = phone
+            };
+
+            var order = new Order
+            {
+                OrderDate = DateTime.Now,
+                TotalAmount = total,
+                Customer = customer
+            };
+
+            _context.Customers.Add(customer);
+            _context.Orders.Add(order);
+            _context.SaveChanges();
+
+            HttpContext.Session.Remove("Cart");
+
+            return RedirectToAction("Confirmation", new { id = order.Id });
+        }
+
+        public IActionResult Confirmation(int id)
+        {
+            var order = _context.Orders
+                .Include(o => o.Customer)
+                .FirstOrDefault(o => o.Id == id);
+            return View(order);
         }
 
 

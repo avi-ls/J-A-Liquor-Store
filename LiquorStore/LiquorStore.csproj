@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Order\**" />
+    <Content Remove="Views\Order\**" />
+    <EmbeddedResource Remove="Views\Order\**" />
+    <None Remove="Views\Order\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -23,10 +30,6 @@
 
   <ItemGroup>
     <None Include="wwwroot\Images\251876.jpg.thumb.319.319.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Order\" />
   </ItemGroup>
 
 </Project>

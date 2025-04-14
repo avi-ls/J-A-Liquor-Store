@@ -1,11 +1,38 @@
 ﻿@{
-    var total = (decimal)TempData["Total"];
+    var subtotal = (decimal)ViewBag.Subtotal;
+    var tax = (decimal)ViewBag.Tax;
+    var shipping = (decimal)ViewBag.Shipping;
+    var total = (decimal)ViewBag.Total;
 }
 
 <h2>Checkout</h2>
 <div class="row">
     <div class="col-md-6">
-        <h4>Order Total: $@total.ToString("0.00")</h4>
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Order Summary</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Subtotal:</span>
+                        <span>$@subtotal.ToString("0.00")</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Tax (13%):</span>
+                        <span>$@tax.ToString("0.00")</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Shipping:</span>
+                        <span>$@shipping.ToString("0.00")</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between fw-bold">
+                        <span>Grand Total:</span>
+                        <span>$@total.ToString("0.00")</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="col-md-6">
