@@ -1,5 +1,11 @@
 ﻿@model IEnumerable<LiquorStore.Models.Product>
 
+<div class="mb-3">
+    <a asp-action="Categories" class="btn btn-dark rounded-pill text-white">
+        ← Back to Categories
+    </a>
+</div>
 <h2>@ViewBag.Category Products</h2>
-@Html.Partial("_DisplayProducts", Model);
+@Html.Partial("_DisplayProducts", Model)
+
 

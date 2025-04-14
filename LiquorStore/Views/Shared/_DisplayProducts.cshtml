@@ -14,16 +14,16 @@
             }
 
             <br /><br />
-            @Html.ActionLink(item.Name, "Details", new { id = item.Id}) <br />
+            @Html.ActionLink(item.Name, "Details", new { id = item.Id}, new { @class = "text-dark" }) <br />
             @Html.DisplayFor(modelItem => item.Brand)<br />
             @Html.DisplayFor(modelItem => item.Category)<br />
-            @Html.DisplayFor(modelItem => item.Price) <br />
+            $@Html.DisplayFor(modelItem => item.Price) <br />
 
             @if (item.StockQuantity > 0)
             {
-                <button 
-                style="background-color: black; color: white; border-radius: 30px; font-size: 17px;" 
-                class="add-to-cart" data-product-id="@item.Id">Add to Cart</button>
+                <button class="btn btn-dark btn-sm add-to-cart" data-product-id="@item.Id">
+                    <i class="bi bi-cart-plus"></i> Add to Cart
+                </button>
             }
             else
             {

@@ -1,83 +1,88 @@
 ﻿@model IEnumerable<LiquorStore.Models.Product>
 
-
 @{
     ViewData["Title"] = "Home";
+    var topCategories = new[] { "Whiskey", "Wine", "Vodka" };
 }
+
 @if (User.Identity.IsAuthenticated)
 {
     <p>Welcome @User.Identity.Name</p>
 }
-    <div>
-        <h1 style="font-size: 75px; font-family: 'Brush Script MT';text-align: center">J & A Liqour and Spirits</h1><br /><br />
+
+<div class="text-center my-5">
+    <h1 style="font-size: 75px; font-family: 'Brush Script MT';">J & A Liquor and Spirits</h1>
+</div>
+
+<div>
+    <img class="img-fluid" src="~/Images/title.jpg" alt="Promo Banner" />
+</div>
+
+<div class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2>Discover Our Collection</h2>
+            <p>Explore our full range of products—from rare finds to everyday favourites. Whether you're hosting or gifting, we've got the perfect taste waiting for you.</p>
+            <a asp-controller="Product" asp-action="Index" class="btn btn-dark rounded-pill text-white">Browse All Products</a>
+        </div>
+        <div class="col-md-6">
+            <img class="img-fluid rounded shadow" src="~/Images/liquors.jpg" alt="Liquors" style="height: 300px; object-fit: cover; width: 100%;" />
+        </div>
     </div>
-    <div>
-        <img style ="width: 100%; align-items: center;"src="~/Images/41617 Made in Canada Campaign_PromoBanner_FA.jpg"/><br /><br />
-    </div>
-    <div>
-        <h2>On Sale</h2>
-        <table style="border-spacing: 150px; border-collapse: separate;">
-            <tr>
-                @foreach (var item in Model)
-                {
-                    <td style="width: 300px; font-size: 20px;">
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Featured Tastes</h2>
+    <div class="row">
+        @foreach (var item in Model.Take(3))
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
                     @if (item.Image != null && item.Image.Length > 0)
                     {
-                        <img style="width: 100%; object-fit: contain; height: 300px;" src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))" />
-                    }       
+                        <img src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))" class="card-img-top" style="height: 300px; object-fit: contain;" />
+                    }
                     else
                     {
-                        <img style="width: 100%; object-fit: contain; height: 300px;" src="~/Images/251876.jpg.thumb.319.319.png" />
-                    }<br /><br />
-                        @Html.ActionLink(item.Name, "Details", "Product", new { id = item.Id }) <br />
-                        @Html.DisplayFor(modelItem => item.Brand)<br />
-                        @Html.DisplayFor(modelItem => item.Category)<br />
-                        @Html.DisplayFor(modelItem => item.Price) <br />
-                    <button class="btn btn-dark btn-sm add-to-cart"
-                            data-product-id="@item.Id">
-                        <i class="bi bi-cart-plus"></i> Add to Cart
-                    </button>
-                    </td>
-                }
-                    
-            </tr>
-            
-            <tr>
-                <td colspan="4" style="font-size: 30px; text-align: center;"> 
-                    @Html.ActionLink("Shop All", "Index", "Product")
-                </td>
-            </tr>
-        </table>
+                        <img src="~/Images/251876.jpg.thumb.319.319.png" class="card-img-top" style="height: 300px; object-fit: contain;" />
+                    }
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@Html.ActionLink(item.Name, "Details", "Product", new { id = item.Id }, new { @class = "text-dark" })</h5>
+                        <p class="card-text">@item.Brand<br />@item.Category<br />$@item.Price</p>
+                        <button class="btn btn-dark btn-sm add-to-cart" data-product-id="@item.Id">
+                            <i class="bi bi-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
-    <div> 
-        <div style="text-align: center;">
-         <h2 >Categories</h2> 
-         </div>
-         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 20%; margin: 0 auto; justify-content: center; align-items: center; text-align: center;"> 
-             <div> 
-                 <a asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Whiskey">
-                 <img style="height: 200px; width: 200px;" src="~/Images/istockphoto-1140849064-612x612.jpg" /> 
-                 <h2>Whiskey</h2> 
-                 </a>
-             </div> 
-            <div>
-                <a asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Liquor">
-                <img style="height: 200px; width: 200px;" src="~/Images/download.jpg" />
-                <h2>Liquor</h2> 
-                </a>
-             </div> 
-            <div> 
-                <a asp-controller="Product" asp-action="CategoryProducts" asp-route-category="Vodka">
-                <img style="height: 200px; width: 200px;" src="~/Images/Screenshot 2025-03-17 031817.png"/>
-                <h2>Vodka</h2>
-                </a>
-             </div>
-         </div>
-        
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Top Categories</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        @foreach (var category in topCategories)
+        {
+            <div class="col">
+                <div class="position-relative text-white">
+                    <a asp-controller="Product" asp-action="CategoryProducts" asp-route-category="@category" class="text-decoration-none text-white">
+                        <img src="~/images/@category.ToLower().Replace(" ", "-").Replace("&", "and").Replace(".", "")-category.jpg"
+                             alt="@category"
+                             class="img-fluid rounded shadow w-100"
+                             style="height: 200px; object-fit: cover;" />
+                        <h5 class="position-absolute top-50 start-50 translate-middle text-center bg-dark bg-opacity-50 px-3 py-2 rounded">
+                            @category
+                        </h5>
+                    </a>
+                </div>
+            </div>
+        }
     </div>
+</div>
 
 <script>
-         $(document).on("click", ".add-to-cart", function () {
+    $(document).on("click", ".add-to-cart", function () {
         var productId = $(this).data("product-id");
         var button = $(this);
 
@@ -97,7 +102,3 @@
         });
     });
 </script>
-
-
-
-
