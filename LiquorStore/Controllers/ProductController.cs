@@ -2,6 +2,7 @@ using LiquorStore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 
 namespace LiquorStore.Controllers
@@ -64,16 +65,19 @@ namespace LiquorStore.Controllers
 
         public IActionResult Create()
         {
+            ViewBag.CategoryOptions = GetCategoryOptions();
             return View();
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Product product)
+        public async Task<IActionResult> Create(Product product, IFormFile ImageFile)
         {
+            Console.WriteLine("==> POST Create called");
             Console.WriteLine("ImageFile: " + (product.ImageFile != null ? product.ImageFile.FileName : "null"));
             ModelState.Remove("Image");
+            ViewBag.CategoryOptions = GetCategoryOptions();
             if (product.ImageFile != null && product.ImageFile.Length > 0)
             {
                 using (var memoryStream = new MemoryStream())
@@ -86,13 +90,22 @@ namespace LiquorStore.Controllers
             {
                 ModelState.AddModelError("Image", "Image is required.");
             }
-
+            ViewBag.CategoryOptions = GetCategoryOptions();
+            Console.WriteLine("ModelState.IsValid: " + ModelState.IsValid);
+            foreach (var modelState in ModelState)
+            {
+                foreach (var error in modelState.Value.Errors)
+                {
+                    Console.WriteLine($"Key: {modelState.Key}, Error: {error.ErrorMessage}");
+                }
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
 
             return View(product);
         }
@@ -101,6 +114,7 @@ namespace LiquorStore.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewBag.CategoryOptions = GetCategoryOptions();
             if (id == null)
             {
                 return NotFound();
@@ -115,7 +129,6 @@ namespace LiquorStore.Controllers
         }
 
         [HttpGet]
-
         public IActionResult Search(string term)
         {
             if (string.IsNullOrEmpty(term))
@@ -165,9 +178,8 @@ namespace LiquorStore.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Product product, IFormFile ImageFile)
-
         {
-
+            ViewBag.CategoryOptions = GetCategoryOptions();
 
             if (id != product.Id)
             {
@@ -207,7 +219,7 @@ namespace LiquorStore.Controllers
                 _context.Entry(productToUpdate).Property(p => p.Image).IsModified = true;
             }
             Console.WriteLine("Image length: " + (productToUpdate.Image?.Length ?? 0));
-            
+
             if (ModelState.IsValid)
             {
                 try
@@ -272,7 +284,22 @@ namespace LiquorStore.Controllers
         {
             return _context.Products.Any(e => e.Id == id);
         }
+        private List<SelectListItem> GetCategoryOptions()
+        {
+            return new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Whiskey", Value = "Whiskey" },
+        new SelectListItem { Text = "Cognac", Value = "Cognac" },
+        new SelectListItem { Text = "Vodka", Value = "Vodka" },
+        new SelectListItem { Text = "Tequila", Value = "Tequila" },
+        new SelectListItem { Text = "Rum", Value = "Rum" },
+        new SelectListItem { Text = "Champagne", Value = "Champagne" },
+        new SelectListItem { Text = "Liqueur", Value = "Liqueur" },
+        new SelectListItem { Text = "Wine", Value = "Wine" }
+    };
+        }
     }
+
 }
 
 
