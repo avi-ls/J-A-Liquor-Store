@@ -14,7 +14,6 @@ public class AccountController : Controller
         _context = context;
     }
 
-    // GET: /Account/Register
     public IActionResult Register()
     {
         return View();
@@ -25,12 +24,10 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            // Check if user already exists
             var existingUser = _context.Account
                 .FirstOrDefault(u => u.UserName == user.UserName);
             if (existingUser == null)
             {
-                // Add new user to the database
                 _context.Account.Add(user);
                 _context.SaveChanges();
                 return RedirectToAction("Login");
@@ -93,7 +90,6 @@ public class AccountController : Controller
     }
     public IActionResult LoggedIn()
     {
-        // Check if user is actually logged in
         if (string.IsNullOrEmpty(HttpContext.Session.GetString("userId")))
         {
             return RedirectToAction("Index");
@@ -105,10 +101,8 @@ public class AccountController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Logout()
     {
-        // Sign out the user
         await HttpContext.SignOutAsync("Cookies");
 
-        // Clear session data (optional)
         HttpContext.Session.Clear();
 
         return RedirectToAction("Index", "Home");

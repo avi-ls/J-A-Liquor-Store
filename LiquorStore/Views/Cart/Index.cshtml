@@ -55,20 +55,24 @@
 @section Scripts {
     <script>
         $(document).on("click", ".remove-from-cart", function () {
+
             var productId = $(this).data("product-id");
             var row = $(this).closest("tr");
 
             $.ajax({
                 url: '@Url.Action("RemoveFromCart", "Cart")',
+
                 type: 'POST',
+
                 data: { productId: productId },
+
                 success: function (response) {
                     if (response.success) {
                         row.remove();
                         $("#cartItemCount").text(response.itemCount);
 
-                        // Update BOTH grand totals
                         $("#cartGrandTotal, #cartPageGrandTotal").text("$" + response.grandTotal.toFixed(2));
+
 
                         if (response.itemCount === 0) {
                             $("#cartContents").html("<p>Your cart is empty</p>");
